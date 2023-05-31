@@ -1,6 +1,8 @@
 
 
 # yolov7とMiDaSを用いた相対距離推定
+利用するにはyolov7とMIDaSの重み（weight）ファイルをweightsフォルダにダウンロードしておく必要があります。
+
 
 ## 入力画像
 ![input_photo``](https://tk-2025.oops.jp/git/yolov7_and_midas/resize/photo_2.jpg)
