@@ -3,7 +3,7 @@ import yolo_run
 all = [i for i in range(80)]
 
 yolo_run.detect(source="./input_photo/photo_1.jpg", save_path='./save_data',
-                iou_thres=0.45, conf_thres=0.3, classes=[0, 2])#classes=all
+                iou_thres=0.45, conf_thres=0.3, classes=[0, 2])#classes=all 
 
 # PERSON = 0
 # BICYCLE = 1
