@@ -1,6 +1,6 @@
 
 
-# yolov7とMiDaSを用いた相対距離推定
+# yolov7とMiDaSを用いた　単眼カメラの相対距離推定
 利用するにはyolov7とMIDaSの重み（weight）ファイルをweightsフォルダにダウンロードしておく必要があります。<br>
 
 重み（weight）ファイルのダウンロードには以下を参照してください。<br>
@@ -20,7 +20,6 @@
 |classes|list|相対距離検出対象の設定|検出できるすべてを対象とする場合は`classes = all`を設定
 
 
-**開発途中のため随時更新します。**
 ## 実行例１
 ### 入力画像
 ![input_photo](https://tk-2025.oops.jp/git/yolov7_and_midas/resize/photo_2.jpg)
