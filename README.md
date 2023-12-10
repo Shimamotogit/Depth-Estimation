@@ -59,7 +59,7 @@ python ./Depth_Estimation/detect.py
 python ./Depth_Estimation/detect.py --img_path "./input_photo/photo_1.jpg" --save_path "./save_data" --iou_thres 0.45 --conf_thres 0.3 --classes 0 2 （人と車を検出対象とする場合）
 ```
 
-[引数説明](#引数説明)
+<a id="引数説明"></a>
 
 ### 引数説明
 
@@ -71,9 +71,10 @@ python ./Depth_Estimation/detect.py --img_path "./input_photo/photo_1.jpg" --sav
 |--conf_thres|float|物体検出の信頼度の閾値
 |--classes|list|検出対象の設定<br>（対象と対になる番号は[検出対象リスト](#検出対象リスト)を参照してください）
 
-[実行例](#実行例)
+<a id="実行例"></a>
 
 ## 実行例
+
 ### 1, 画像の入力
 
 以下の画像が入力されます。
@@ -94,8 +95,6 @@ YOLOとMiDasを実行します。<br>
 この時のイメージ写真が以下です。
 
 ![output_photo](https://tk-2025.oops.jp/git/yolov7_and_midas/resize/photo_22.jpg)
-
-<a id="検出対象リスト"></a>
 
 <a id="検出対象リスト"></a>
 
