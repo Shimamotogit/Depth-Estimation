@@ -18,7 +18,7 @@ def command_line_argument():
                         help="物体検出の信頼度の閾値設定")
 
     parser.add_argument("--classes", default=[str(i) for i in range(80)], nargs='*',
-                        help="物体クラスの設定")
+                        help="検出対象の設定")
 
     args = parser.parse_args()
     return args
