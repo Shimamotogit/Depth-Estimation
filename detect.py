@@ -1,9 +1,32 @@
 import yolo_run
 
-all = [i for i in range(80)]
+def command_line_argument():
 
-yolo_run.detect(source="./input_photo/photo_1.jpg", save_path='./save_data',
-                iou_thres=0.45, conf_thres=0.3, classes=[0, 2])#classes=all 
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-i", "--img_path", default="./input_photo/photo_1.jpg", type=str, 
+                        help="入力画像のパス設定")
+
+    parser.add_argument("-s", "--save_path", default="./save_data", type=str, 
+                        help="画像を保存するフォルダのパス設定")
+
+    parser.add_argument("-it", "--iou_thres", default=0.45, type=float, 
+                        help="物体検出の際の Intersection over Union (IoU) 閾値設定")
+
+    parser.add_argument("-ct", "--conf_thres", default=0.3, type=float, 
+                        help="物体検出の信頼度の閾値設定")
+
+    parser.add_argument("--classes", default=[str(i) for i in range(80)], nargs='*',
+                        help="物体クラスの設定")
+
+    args = parser.parse_args()
+    return args
+
+args = command_line_argument()
+
+yolo_run.detect(source=args.img_path, save_path=args.save_path,
+                iou_thres=args.iou_thres, conf_thres=args.conf_thres, classes=[int(i) for i in args.classes])
 
 # PERSON = 0
 # BICYCLE = 1
